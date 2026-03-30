@@ -62,6 +62,6 @@ public class Animal {
 
     @Override
     public String toString() {
-        return "Animal{id=" + id + ", name='" + name + "', dob=" + getDateDOB() + ", description='" + description + "'}";
+        return "Animal id = " + id + ", name = " + name + ", dob =" + getDateDOB() + ", description ='" + description + "'}";
     }
 }
