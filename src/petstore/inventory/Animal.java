@@ -1,6 +1,4 @@
-package library.app;
-
-import library.inventory.Item;
+package petstore.inventory;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -14,16 +12,18 @@ public class Animal {
     protected LocalDate dateDOB;
     protected String description;
 
-    public Animal(String name, String dateReceived) throws Exception {
+    public Animal(String name, String dateDOB) throws Exception {
         this.id = ++Animal.lastId;
-        setName(title);
+        setName(name);
         setDateDOB(dateDOB);
+        this.description = "";
     }
 
-    public Animal(int id, String title, String dateReceived) throws Exception {
+    public Animal(int id, String name, String dateDOB) throws Exception {
         this.id = id;
         setName(name);
         setDateDOB(dateDOB);
+        this.description = "";
     }
 
     public String getName() {
@@ -33,23 +33,35 @@ public class Animal {
     public void setName(String name) throws Exception {
         name = name.trim();
 
-        if (name.isBlank()){
-            throw new Exception("Invalid! Title can not be empty.");
+        if (name.isBlank()) {
+            throw new Exception("Invalid! Name can not be empty.");
         }
 
         this.name = name;
     }
 
     public String getDateDOB() {
-        return dateDOB.format(Item.formatter);
+        return dateDOB.format(Animal.formatter);
     }
 
     public void setDateDOB(String dateDOB) throws Exception {
         try {
-            this.dateDOB = LocalDate.parse(dateDOB, Item.formatter);
-        } catch (Exception e){
+            this.dateDOB = LocalDate.parse(dateDOB, Animal.formatter);
+        } catch (Exception e) {
             throw new Exception("Invalid date! Must be MM-DD-YYYY");
         }
     }
 
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description.trim();
+    }
+
+    @Override
+    public String toString() {
+        return "Animal{id=" + id + ", name='" + name + "', dob=" + getDateDOB() + ", description='" + description + "'}";
+    }
 }
