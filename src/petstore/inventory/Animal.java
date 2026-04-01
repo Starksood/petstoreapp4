@@ -58,6 +58,11 @@ public class Animal {
         this.description = description.trim();
     }
 
+
+    public void displayAnimal(){
+        System.out.printf(" %-15s %-10\n", id, name, getDateDOB());
+    }
+
     @Override
     public String toString() {
         return "Animal Id = " + id + ", Name = " + name + ", Date of Birth =" + getDateDOB();
