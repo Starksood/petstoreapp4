@@ -31,13 +31,11 @@ public class Animal {
     }
 
     public void setName(String name) throws Exception {
-        name = name.trim();
-
-        if (name.isBlank()) {
+        if (name == null || name.isBlank()) {
             throw new Exception("Invalid! Name can not be empty.");
         }
 
-        this.name = name;
+        this.name = name.trim();
     }
 
     public String getDateDOB() {
@@ -56,12 +54,12 @@ public class Animal {
         return description;
     }
 
-    public void setDescription(String description) {
+    public void setDescription(String description) throws Exception {
         this.description = description.trim();
     }
 
     @Override
     public String toString() {
-        return "Animal id = " + id + ", name = " + name + ", dob =" + getDateDOB() + ", description ='" + description + "'}";
+        return "Animal Id = " + id + ", Name = " + name + ", Date of Birth =" + getDateDOB();
     }
 }
