@@ -93,7 +93,7 @@ public class PetStoreApp {
         finCount = Input.getInt("finCount: ");
 
         try {
-            userInput = Input.getIntRange("WaterType 1=Fiction, 2=Children, 3=Poetry: ", 1, 3);
+            userInput = Input.getIntRange("WaterType 1=Salt, 2=Fresh, 3=Both: ", 1, 3);
             WaterType = WaterType.values()[userInput - 1];
         } catch (Exception e) {
             throw new Exception("Invalid data! Fish WaterType = " + WaterType);
@@ -123,7 +123,7 @@ public class PetStoreApp {
         wingSpan = Input.getInt("Wing Span: ");
 
         try {
-            int userInput = Input.getIntRange("NestType 1=Magazine, 2=Journal, 3=Newspaper: ", 1, 3);
+            int userInput = Input.getIntRange("NestType 1=Burrow, 2=Cup, 3=Dome: ", 1, 3);
             NestType = NestType.values()[userInput - 1];
         } catch (Exception e) {
             throw new Exception("Invalid data! Bird NestType = " + NestType);
