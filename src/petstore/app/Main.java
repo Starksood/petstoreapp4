@@ -1,8 +1,6 @@
 package petstore.app;
 
-import petstore.inventory.Animal;
-import petstore.inventory.Fish;
-import petstore.inventory.WaterType;
+import petstore.inventory.*;
 
 
 public class Main {
@@ -18,6 +16,13 @@ public class Main {
         try {
             Fish f1 = new Fish(" Fries ", "01-01-2026", 2, WaterType.SALT);
             f1.displayAnimal();
+        } catch (Exception e){
+            System.out.println(e.getMessage());
+        }
+
+        try {
+            Bird b1 = new Bird(" Mayo ", "01-01-2026", 2, NestType.BORROW);
+            b1.displayAnimal();
         } catch (Exception e){
             System.out.println(e.getMessage());
         }

@@ -4,7 +4,7 @@ public class Fish extends Animal{
     private int finCount;
     private WaterType water;
 
-    private Fish(String name, String dateOfBirth, int finCount, WaterType water) throws Exception{
+    public Fish(String name, String dateOfBirth, int finCount, WaterType water) throws Exception{
         super(name, dateOfBirth);
         setFinCount(finCount);
         setWater(water);
