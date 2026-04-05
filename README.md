@@ -22,6 +22,10 @@ src/
 
 ---
 
+<img src="https://github.com/Starksood/petstoreapp4/blob/main/Screenshot%202026-04-05%20at%2018.27.47.png">
+
+---
+
 ## Requirements
 
 - Java 11 or higher
