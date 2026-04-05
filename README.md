@@ -127,7 +127,7 @@ Date DOB (MM-DD-YYYY): 03-15-2022
 Description or press enter to continue: Clownfish
 Type 1=Fish, 2=Bird: 1
 finCount: 6
-WaterType 1=Fiction, 2=Children, 3=Poetry: 1
+WaterType 1=Salt, 2=Fresh, 3=Both: 1
 Successful Add: Animal Id = 1, Name = Nemo, Date of Birth =3-15-2022
 Press enter to continue...
 ```
@@ -147,7 +147,7 @@ Date DOB (MM-DD-YYYY): 06-01-2021
 Description or press enter to continue: Yellow canary
 Type 1=Fish, 2=Bird: 2
 Wing Span: 25
-NestType 1=Magazine, 2=Journal, 3=Newspaper: 2
+NestType 1=Burrow, 2=Cup, 3=Dome: 2
 Successful Add: Animal Id = 2, Name = Tweety, Date of Birth =6-1-2021
 Press enter to continue...
 ```
